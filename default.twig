@@ -1,0 +1,47 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+<main id="cd-main-content">
+	<section id="cd-intro">
+		<div class="bk-header">
+			<div class="header-content">
+				<div class="brand wrapper">
+					{{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
+					{{widget('companyname', 'header-companyname', {"business": "Explore"})|raw}}
+				</div>
+
+				<div class="details-container wrapper">
+					{{widget('profile', 'headline', { 'profileType':'headline'})|raw}}
+					{{widget('profile', 'strapline', { 'profileType':'strapline'})|raw}}
+					{{widget('button', 'button', {text:'button', 'align':'widget-align-center'})|raw}}
+				</div>
+			</div>
+		</div>
+
+		<header class="cd-header">
+			<div id="cd-social">
+				{{widget('socialicons', 'thisunqiuewidgetname', {'googleplus': 'https://plus.google.com/101946323226233111530', 'linkedin':'http://www.linkedin.com/company/basekit', 'facebook': 'https://www.facebook.com/TeamBaseKit', 'twitter': 'https://twitter.com/basekit', 'youtube': 'https://www.youtube.com/user/TeamBaseKit', 'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
+			</div>
+			<a class="cd-menu-trigger" href="#main-nav">Menu<span></span>
+			</a>
+		</header>
+		<div class="cd-blurred-bg"></div>
+	</section> <!-- cd-intro -->
+</main>
+
+<div class="cd-shadow-layer"></div>
+
+<nav id="main-nav">
+	{{widget('extendednavigation', 'header-navigation', {"align":"center"})|raw}}
+	<a href="#0" class="cd-close-menu">Close<span></span></a>
+</nav>
+
+<div class="wrapper">
+	<div class="main">
+		{{zone('main')|raw}}
+	</div>
+</div><!--end main-->
+
+{% include 'includes/footer.twig' %}
+
+{% endblock %}
