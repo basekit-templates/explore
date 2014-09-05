@@ -70,7 +70,12 @@
         .clearfix;
     }
 	.widget.profile, .widget.companyname a {
-			color: @font-swatch10-color;
+		color: @font-swatch10-color;
+        @media @mobile {
+            font-size: 22px;
+            line-height: 36px;
+        }
+
 	}
 	.widget.button button.btn{
 		.border-radius(50px);
@@ -92,6 +97,7 @@
     padding: 3em 0;
     @media @mobile {
         padding: 2em 0;
+        display: none;
     }
     .widget.button {
         padding: 2em 0;
