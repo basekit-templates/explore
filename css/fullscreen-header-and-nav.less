@@ -307,9 +307,9 @@ Main components
     top: 8px;
     width: 500px;
     height: 32px;
-    @media @mobile {
+    @media only screen and (max-width: 840px) {
         line-height: 70px;
-        left: 0;
+        left: 5%;
         top: 25px;
         width: 79%;
     }
@@ -348,7 +348,7 @@ Main components
         background-color: darken(@color-swatch7,5%);
         .transition( all, 0.5s, ease );
     }
-    @media @mobile {
+    @media only screen and (max-width: 840px) {
         top: 15px;
         right: 5%;
     }
