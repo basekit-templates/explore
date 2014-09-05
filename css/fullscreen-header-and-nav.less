@@ -1,12 +1,8 @@
-/* =======
-    Nav 
-    ====== */
-
-/* -------------------------------- 
+/* =================== 
 
 Primary style
 
--------------------------------- */
+====================== */
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,12 +19,11 @@ html, body {
   height: 100%;
 }
 
-
-/* -------------------------------- 
+/* ==================================== 
 
 Modules - reusable parts of our design
 
--------------------------------- */
+======================================= */
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
@@ -42,85 +37,190 @@ Modules - reusable parts of our design
   clear: both;
 }
 
-/* -------------------------------- 
+/* ===================
 
-Default Page
+Header
 
--------------------------------- */
+====================== */
 
-.bk-default {
-    #cd-main-content {
-        height: auto;
-    }
-    #cd-intro {
-        position: initial;
-        height: auto;
-    }
-    .cd-header {
-        position: relative;
-        min-height: 80px;
-        height: auto;    
-    }
-    @media only screen and (max-width: 840px) {
-        #cd-social {
-            position: relative;
-            left: 0;
-            top: 0;
-            width: 70%;
-            float: left;
-            height: auto;
-            min-height: 45px;
+.bk-header {
+    width: 100%;
+    text-align: center;
+    display: table;
+    position: relative;
+    overflow: hidden;
+    padding: 5em 0;
+    height: 100%;
+    .widget.companyname {
+        .clearfix;
+        a {
+            @media @mobile {
+                font-size: 22px;
+                line-height: 36px;
+            }  
         }
-        #cd-social .widget.socialicons {
-            min-height: 0;
-            position: absolute;
-            line-height: 65px;
-            left: 5%;
-            span a {
-                margin: 0;
-            }
-        }
-        .cd-menu-trigger {
-            top: 0;
-            height: 45px;
-            line-height: 45px;
-            padding: 0;
-            right: 5%;
-        }
-
-    } /* end media query */
-
-    #cd-company-name {
-        display: table;
-        margin: 0 auto;
-        background-color: @color-swatch7;
-        width: 100%;
-        .widget.companyname {
-            display: table;
-            min-height: 80px;
-            vertical-align: middle;
-            max-width: 40%;
-            margin: 0 auto;
-            text-align: center;
-            @media only screen and (max-width: 840px) {
-                max-width: 100%;
-            }
-            a {
-                display: table-cell;
-                vertical-align: middle;
-                font-size: 28px;
-                line-height: 38px;
-                color: @color-swatch4;
-                padding: 20px 0;
-            }
+    }
+    .widget.button button.btn{
+        .border-radius(50px);
+        background-color: @font-swatch10-color;
+        color: @color-swatch4;
+        &:hover {
+            background-color: @font-swatch7-background-color-hover;
+            .transition( all, 0.5s, ease );
+            border: 2px solid @color-swatch2;
+            color: @color-swatch2;
         }
     }
 }
-/* -------------------------------- 
+
+.header-content {
+    vertical-align: middle;
+    min-height: 568px;
+    display: table-cell;
+}
+
+/* Header Profile Widgets */
+
+.details-container {
+    padding: 3em 0;
+    @media @mobile {
+        padding: 2em 0;
+        display: none;
+    }
+    .widget.button {
+        padding: 2em 0;
+        @media @mobile {
+            padding: 1em 0;
+        }
+    }
+}
+
+.bk-header .widget.profile {
+    span, .bk-profile-address p, a, .twitter .twitter-content p {
+        font-family:@font-swatch8-font-family;
+        font-size: @font-swatch8-font-size;
+        font-weight: @font-swatch8-font-weight;
+        line-height:@font-swatch8-line-height;
+        color: @font-swatch8-color;
+        letter-spacing: @font-swatch8-letter-spacing;
+        @media @mobile {
+            font-size: @font-swatch9-font-size;
+            line-height: @font-swatch9-line-height;
+        }
+    } 
+    .twitter .twitter-content p {
+        max-width: 70%;
+        margin: 0 auto;
+        @media @tablet {
+            max-width: 90%;
+        }
+        @media @mobile {
+            max-width: 100%;
+        }
+    }
+    .bk-profile-socialicons span a {
+        background-color: @color-swatch4;
+    }
+}
+
+.bk-header, .bk-footer {
+    .widget.profile form fieldset input {
+        .border-radius(50px);
+    }
+}
+
+.bk-profile-address p {
+    display: inline-block;
+    padding-bottom: 0;
+    &:after {
+        content: "\002C";
+    }
+    &:last-child:after {
+        content: '';
+    }
+}
+
+/* Social Icons in Nav Bar */
+
+#cd-social .widget.socialicons span a {
+    margin-right: 0;
+}
+
+.widget.profile .bk-profile-socialicons span a, .widget.socialicons span a {
+    .border-radius(50px);
+}
+
+.cd-header .widget.socialicons {
+    margin: 0;
+    span a {
+        background-color: transparent;
+        &:hover {
+            background-color: darken(@color-swatch7,5%);
+        }
+    }
+}
+
+.cd-header .widget.socialicons {
+    /* PNG ICONS */
+    span.bk-socialicons-twitter a {
+        background-image: image('/images/social/socialicons-twitter.png');
+        background-size: 30px;
+    }
+    span.bk-socialicons-linkedin a {
+        background-image: image('/images/social/socialicons-linkedin.png');
+        background-size: 30px;
+    }
+    span.bk-socialicons-facebook a {
+        background-image: image('/images/social/socialicons-facebook.png');
+        background-size: 30px;
+    }
+    span.bk-socialicons-rss a {
+        background-image: image('/images/social/socialicons-rss.png');
+        background-size: 30px;
+    }
+    span.bk-socialicons-googleplus a {
+        background-image: image('/images/social/socialicons-googleplus.png');
+        background-size: 30px;
+    }
+    span.bk-socialicons-youtube a {
+        background-image: image('/images/social/socialicons-youtube.png');
+        background-size: 30px;
+    }
+}
+
+.svg .cd-header .widget.socialicons {
+    /* SVG ICONS */
+    span.bk-socialicons-twitter a {
+        background-image: image('/images/social/socialicons-twitter.svg');
+        background-size: 25px;
+    }
+    span.bk-socialicons-linkedin a {
+        background-image: image('/images/social/socialicons-linkedin.svg');
+        background-size: 25px;
+    }
+    span.bk-socialicons-facebook a {
+        background-image: image('/images/social/socialicons-facebook.svg');
+        background-size: 25px;
+    }
+    span.bk-socialicons-rss a {
+        background-image: image('/images/social/socialicons-rss.svg');
+        background-size: 25px;
+    }
+    span.bk-socialicons-googleplus a {
+        background-image: image('/images/social/socialicons-googleplus.svg');
+        background-size: 25px;
+    }
+    span.bk-socialicons-youtube a {
+        background-image: image('/images/social/socialicons-youtube.svg');
+        background-size: 25px;
+    }
+}
+
+/* ===================
 
 Main components 
 
--------------------------------- */
+====================== */
 #cd-main-content {
     position: relative;
     height: 100%;
@@ -236,6 +336,8 @@ Main components
     font-size: 14px;
     font-size: 0.875rem;
     color: @color-swatch4;
+    border: 1px solid @color-swatch4;
+    .border-radius(3px);
 }
 .cd-menu-trigger span {
     /* hamburger icon */
@@ -245,7 +347,7 @@ Main components
     height: 2px;
     background-color: @color-swatch4;
     vertical-align: middle;
-    margin-left: 10px;
+    margin: 0 5px;
     -webkit-transform: translateY(-2px);
     -moz-transform: translateY(-2px);
     -ms-transform: translateY(-2px);
@@ -289,6 +391,12 @@ Main components
         right: 60px;
     }
 }
+
+/* ===================
+
+Navigation
+
+====================== */
 
 #main-nav {
     position: fixed;
@@ -528,3 +636,80 @@ Main components
     -moz-transition-delay: 0s;
     transition-delay: 0s;
 }
+
+
+/* ===================
+
+Default Page
+
+ ===================== */
+
+.bk-default {
+    #cd-main-content {
+        height: auto;
+    }
+    #cd-intro {
+        position: initial;
+        height: auto;
+    }
+    .cd-header {
+        position: relative;
+        min-height: 80px;
+        height: auto;    
+    }
+    @media only screen and (max-width: 840px) {
+        #cd-social {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 70%;
+            float: left;
+            height: auto;
+            min-height: 45px;
+        }
+        #cd-social .widget.socialicons {
+            min-height: 0;
+            position: absolute;
+            line-height: 65px;
+            left: 5%;
+            span a {
+                margin: 0;
+            }
+        }
+        .cd-menu-trigger {
+            top: 0;
+            height: 45px;
+            line-height: 45px;
+            padding: 0;
+            right: 5%;
+        }
+
+    } /* end media query */
+
+    #cd-company-name {
+        display: table;
+        margin: 0 auto;
+        background-color: @color-swatch7;
+        width: 100%;
+        .widget.companyname {
+            display: table;
+            min-height: 80px;
+            vertical-align: middle;
+            max-width: 40%;
+            margin: 0 auto;
+            text-align: center;
+            @media only screen and (max-width: 840px) {
+                max-width: 100%;
+            }
+            a {
+                display: table-cell;
+                vertical-align: middle;
+                font-size: 28px;
+                line-height: 38px;
+                color: @color-swatch4;
+                padding: 20px 0;
+            }
+        }
+    }
+}
+
