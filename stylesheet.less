@@ -1,26 +1,9 @@
-
-/* ======================================
-    REMOVE THIS WHEN TEMPLATE IS FINISHED 
-    ===================================== */
-
-#tdk-toolbar {
-    z-index: 0 !important;
-}
-
-body.in-tdk {
-    margin-top: 0 !important;
-}
-/* End*/
-
-
-
-
 /* ===================
 	Imports & Includes 
 	==================*/
 
 @import "@{templateCommon}/basekit-bootstrap.less";
-@import "@{templateLocal}/css/test-nav.less";
+@import "@{templateLocal}/css/fullscreen-nav.less";
 
 /* =======
 	Mixins 
@@ -129,6 +112,10 @@ body.in-tdk {
 }
 
 /* Social Icons in Nav Bar */
+
+#cd-social .widget.socialicons span a {
+    margin-right: 0;
+}
 
 .widget.profile .bk-profile-socialicons span a, .widget.socialicons span a {
     .border-radius(50px);
