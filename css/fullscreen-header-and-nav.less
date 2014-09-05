@@ -303,31 +303,20 @@ Main components
 
 #cd-social {
     position: absolute;
-    left: 10px;
-    top: 8px;
-    width: 500px;
     height: 32px;
-    @media only screen and (max-width: 840px) {
-        line-height: 70px;
-        left: 5%;
-        top: 25px;
-        width: 79%;
-    }
+    line-height: 70px;
+    left: 5%;
+    top: 25px;
+    width: 79%;
 }
 #cd-social img {
     display: block;
 }
-@media only screen and (min-width: 1170px) {
-    #cd-social {
-        left: 60px;
-    }
-}
-
 .cd-menu-trigger {
     display: inline-block;
     position: absolute;
-    right: 0;
-    top: 0;
+    top: 15px;
+    right: 5%;
     height: 50px;
     line-height: 50px;
     padding: 0 .7em;
@@ -341,10 +330,6 @@ Main components
     &:hover {
         background-color: darken(@color-swatch7,5%);
         .transition( all, 0.5s, ease );
-    }
-    @media only screen and (max-width: 840px) {
-        top: 15px;
-        right: 5%;
     }
 }
 .cd-menu-trigger span {
