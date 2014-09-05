@@ -3,7 +3,7 @@
 	==================*/
 
 @import "@{templateCommon}/basekit-bootstrap.less";
-@import "@{templateLocal}/css/fullscreen-nav.less";
+@import "@{templateLocal}/css/fullscreen-header-and-nav.less";
 
 /* =======
 	Mixins 
@@ -34,7 +34,7 @@
 	==== */
 
 .main {
-	padding: 40px 0 0;
+	padding: 4em 0;
 	float: left;
 	width: 100%;
     .widget {
@@ -51,183 +51,6 @@
     @media only screen and (min-width: 1140px) {
         width: 1024px;
         margin: 0 auto;
-    }
-}
-
-/* =======
-	Header 
-	====== */
-
-.bk-header {
-	width: 100%;
-	text-align: center;
-	display: table;
-	position: relative;
-	overflow: hidden;
-	padding: 5em 0;
-    height: 100%;
-    .widget.companyname {
-        .clearfix;
-        a {
-            @media @mobile {
-                font-size: 22px;
-                line-height: 36px;
-            }  
-        }
-    }
-	.widget.button button.btn{
-		.border-radius(50px);
-		background-color: @font-swatch10-color;
-		color: @color-swatch4;
-        &:hover {
-            background-color: @font-swatch7-background-color-hover;
-            .transition( all, 0.5s, ease );
-            border: 2px solid @color-swatch2;
-            color: @color-swatch2;
-        }
-	}
-}
-
-.header-content {
-	vertical-align: middle;
-	min-height: 568px;
-	display: table-cell;
-}
-
-/* Header Profile Widgets */
-
-.details-container {
-    padding: 3em 0;
-    @media @mobile {
-        padding: 2em 0;
-        display: none;
-    }
-    .widget.button {
-        padding: 2em 0;
-        @media @mobile {
-            padding: 1em 0;
-        }
-    }
-}
-
-.bk-header .widget.profile {
-    span, .bk-profile-address p, a, .twitter .twitter-content p {
-        font-family:@font-swatch8-font-family;
-        font-size: @font-swatch8-font-size;
-        font-weight: @font-swatch8-font-weight;
-        line-height:@font-swatch8-line-height;
-        color: @font-swatch8-color;
-        letter-spacing: @font-swatch8-letter-spacing;
-        @media @mobile {
-            font-size: @font-swatch9-font-size;
-            line-height: @font-swatch9-line-height;
-        }
-    } 
-    .twitter .twitter-content p {
-        max-width: 70%;
-        margin: 0 auto;
-        @media @tablet {
-            max-width: 90%;
-        }
-        @media @mobile {
-            max-width: 100%;
-        }
-    }
-    .bk-profile-socialicons span a {
-        background-color: @color-swatch4;
-    }
-}
-
-.bk-header, .bk-footer {
-    .widget.profile form fieldset input {
-        .border-radius(50px);
-    }
-}
-
-.bk-profile-address p {
-    display: inline-block;
-    padding-bottom: 0;
-    &:after {
-        content: "\002C";
-    }
-    &:last-child:after {
-        content: '';
-    }
-}
-
-/* Social Icons in Nav Bar */
-
-#cd-social .widget.socialicons span a {
-    margin-right: 0;
-}
-
-.widget.profile .bk-profile-socialicons span a, .widget.socialicons span a {
-    .border-radius(50px);
-}
-
-.cd-header .widget.socialicons {
-    margin: 0;
-    span a {
-        background-color: transparent;
-        &:hover {
-            background-color: darken(@color-swatch7,5%);
-        }
-    }
-}
-
-.cd-header .widget.socialicons {
-    /* PNG ICONS */
-    span.bk-socialicons-twitter a {
-        background-image: image('/images/social/socialicons-twitter.png');
-        background-size: 30px;
-    }
-    span.bk-socialicons-linkedin a {
-        background-image: image('/images/social/socialicons-linkedin.png');
-        background-size: 30px;
-    }
-    span.bk-socialicons-facebook a {
-        background-image: image('/images/social/socialicons-facebook.png');
-        background-size: 30px;
-    }
-    span.bk-socialicons-rss a {
-        background-image: image('/images/social/socialicons-rss.png');
-        background-size: 30px;
-    }
-    span.bk-socialicons-googleplus a {
-        background-image: image('/images/social/socialicons-googleplus.png');
-        background-size: 30px;
-    }
-    span.bk-socialicons-youtube a {
-        background-image: image('/images/social/socialicons-youtube.png');
-        background-size: 30px;
-    }
-}
-
-.svg .cd-header .widget.socialicons {
-    /* SVG ICONS */
-    span.bk-socialicons-twitter a {
-        background-image: image('/images/social/socialicons-twitter.svg');
-        background-size: 25px;
-    }
-    span.bk-socialicons-linkedin a {
-        background-image: image('/images/social/socialicons-linkedin.svg');
-        background-size: 25px;
-    }
-    span.bk-socialicons-facebook a {
-        background-image: image('/images/social/socialicons-facebook.svg');
-        background-size: 25px;
-    }
-    span.bk-socialicons-rss a {
-        background-image: image('/images/social/socialicons-rss.svg');
-        background-size: 25px;
-    }
-    span.bk-socialicons-googleplus a {
-        background-image: image('/images/social/socialicons-googleplus.svg');
-        background-size: 25px;
-    }
-    span.bk-socialicons-youtube a {
-        background-image: image('/images/social/socialicons-youtube.svg');
-        background-size: 25px;
     }
 }
 
@@ -485,12 +308,14 @@ input, input[type='text'], input[type=email] {
 .widget.contactform {
     border: 1px solid darken(@color-swatch1,3%);
     background-color: @color-swatch2;
+    .border-radius(3px);
     padding: 30px;
     fieldset {
         input {
             text-indent: 40px;
             margin-bottom: 10px;
             background-color: darken(@color-swatch1,3%);
+            .border-radius(3px);
             @media @mobile {
                 background-image: none;
                 text-indent: 10px;
@@ -632,6 +457,13 @@ input, input[type='text'], input[type=email] {
         color: @color-swatch3;
     }
     ul.twitter {
+        li {
+            border: 1px solid darken(@color-swatch1,3%);
+            background-color: @color-swatch2;
+            .border-radius(3px);
+            padding: 30px;
+            margin: 5px 0;
+        }
         li span a {
             color: @color-swatch3;
             text-decoration: none;
@@ -962,6 +794,7 @@ footer.blog-post-metadata time {
                         text-align: center;
                         border: 1px solid lighten(@color-swatch3,43%);
                         padding: 1.5em 0 0;
+                        .border-radius(3px);
                         &:before { 
                             content: "\2605";
                             font-size: 15px;
@@ -1185,9 +1018,10 @@ footer.blog-post-metadata time {
     margin-top: 2em;
     .ecom-productslist-image-wrap, .ecom-featuredproducts-image-wrap {
         margin-bottom: 1em;
-        background-color: @color-swatch2 !important;
-        border: 10px solid @color-swatch2;
+        background-color: lighten(@color-swatch5,48%) !important;
+        border: 10px solid lighten(@color-swatch5,48%);
         height: 320px !important;
+        .border-radius(3px);
         @media @mobile {
             background-image: none !important;
             height: auto !important;
@@ -1216,7 +1050,8 @@ footer.blog-post-metadata time {
             margin: 10px 0;
         }
         .ecom-productlist-price, .ecom-featuredproducts-price {
-            background-color: fade(@color-swatch3,8%);
+            background-color: lighten(@color-swatch5,48%);
+            .border-radius(3px);
             display: block;
             padding: 5px 0;
         } 
