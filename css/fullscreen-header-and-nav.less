@@ -159,6 +159,9 @@ Header
             background-color: darken(@color-swatch7,5%);
         }
     }
+    @media @mobile {
+        left: 5%;
+    }
 }
 
 .cd-header .widget.socialicons {
@@ -303,6 +306,12 @@ Main components
     top: 8px;
     width: 500px;
     height: 32px;
+    @media @mobile {
+        line-height: 70px;
+        left: 0;
+        top: 20px;
+        width: 80%;
+    }
 }
 #cd-social img {
     display: block;
