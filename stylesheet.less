@@ -68,15 +68,13 @@
     height: 100%;
     .widget.companyname {
         .clearfix;
-    }
-	.widget.profile, .widget.companyname a {
-		color: @font-swatch10-color;
-        @media @mobile {
-            font-size: 22px;
-            line-height: 36px;
+        a {
+            @media @mobile {
+                font-size: 22px;
+                line-height: 36px;
+            }  
         }
-
-	}
+    }
 	.widget.button button.btn{
 		.border-radius(50px);
 		background-color: @font-swatch10-color;
@@ -107,16 +105,41 @@
     }
 }
 
-.bk-header .widget.profile, .bk-header .widget.profile span {
-    font-family:@font-swatch8-font-family;
-    font-size: @font-swatch8-font-size;
-    font-weight: @font-swatch8-font-weight;
-    line-height:@font-swatch8-line-height;
-    color: @font-swatch8-color;
-    letter-spacing: @font-swatch8-letter-spacing;
-    @media @mobile {
-        font-size: @font-swatch9-font-size;
-        line-height: @font-swatch9-line-height;
+.bk-header .widget.profile {
+    span, .bk-profile-address p, a, .twitter .twitter-content p {
+        font-family:@font-swatch8-font-family;
+        font-size: @font-swatch8-font-size;
+        font-weight: @font-swatch8-font-weight;
+        line-height:@font-swatch8-line-height;
+        color: @font-swatch8-color;
+        letter-spacing: @font-swatch8-letter-spacing;
+        @media @mobile {
+            font-size: @font-swatch9-font-size;
+            line-height: @font-swatch9-line-height;
+        }
+    } 
+}
+
+.bk-header, .bk-footer {
+    .widget.profile form fieldset input {
+        .border-radius(50px);
+    }
+}
+
+.widget.profile form button.btn {
+    height: 45px;
+    border: 2px solid @color-swatch2;
+    left: -50px;
+}
+
+.bk-profile-address p {
+    display: inline-block;
+    padding-bottom: 0;
+    &:after {
+        content: "\002C";
+    }
+    &:last-child:after {
+        content: '';
     }
 }
 
@@ -1474,5 +1497,6 @@ span.ecom-product-category {
         text-align: center;
         float: left;
         width: 100%;
+        padding: 5em 0;
     }
 
