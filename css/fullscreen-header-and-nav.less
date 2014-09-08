@@ -445,16 +445,16 @@ Navigation
     li {
         padding: 3% 0;
         border-bottom: 1px solid darken(@color-swatch7,8%);
+        min-height: 50px;
     }
     @media @mobile {
         padding: 40px 0;
     }
 }
 #main-nav .widget .extendednavigation ul li ul {
-    height: auto;
     display: none;
     border: 2px solid darken(@color-swatch7,7%);
-    padding: 20px 0;
+    padding: 0;
     li {
         padding: 0;
         border-bottom: 0;
@@ -500,10 +500,19 @@ Navigation
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
-    min-height: 50px;
     a {
         white-space: normal;
     }
+    &:hover {
+        background-color: lighten(@color-swatch7,3%);
+        a, .text {
+            color: @font-swatch6-color-hover;
+        }
+    }
+}
+#main-nav .widget .extendednavigation ul li ul li {
+    min-height: auto;
+    padding: 0;
 }
 #main-nav .widget .extendednavigation ul li.folder {
     &:after {
@@ -551,9 +560,9 @@ Navigation
     }
 }
 #main-nav .widget .extendednavigation ul li.folder ul li a {
-    padding: 0 23px;
+    padding: 23px;
     @media @mobile {
-        padding: 0 5%;
+        padding: 10px;
     }
 }
 #main-nav .widget .extendednavigation ul li.folder ul li .text, #main-nav .widget .extendednavigation ul li.folder ul li span {
