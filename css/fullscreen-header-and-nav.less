@@ -409,12 +409,11 @@ Navigation
 #main-nav .widget.extendednavigation, #main-nav .widget .extendednavigation  {
     height: 100%;
     width: 100%;
+    overflow-y: auto;
 }
 #main-nav .widget .extendednavigation ul {
-    height: 100%;
     width: 100%;
     padding: 20px 0;
-    overflow-y: auto;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -445,20 +444,24 @@ Navigation
     align-items: flex-start;
     li {
         padding: 3% 0;
+        border-bottom: 1px solid darken(@color-swatch7,8%);
+    }
+    @media @mobile {
+        padding: 40px 0;
     }
 }
 #main-nav .widget .extendednavigation ul li ul {
     height: auto;
     display: none;
     border: 2px solid darken(@color-swatch7,7%);
-    padding: 3% 0;
+    padding: 20px 0;
     li {
         padding: 0;
+        border-bottom: 0;
     }
 }
 #main-nav .widget .extendednavigation ul li:hover ul {
     display: block;
-    margin: 0 auto 3em;
     background-color: darken(@color-swatch7,2%);
     width: 60%;
     margin: 0 20%;
@@ -471,9 +474,24 @@ Navigation
         margin: 0 auto;
     }
 }
+
+#main-nav .widget .extendednavigation ul.align-left li:hover ul {
+    margin: 0 0 0 80px;
+    @media @mobile {
+        margin: 0 auto;
+    }
+}
+#main-nav .widget .extendednavigation ul.align-right li:hover ul {
+    margin: 0 80px 0 0;
+    right: 0;
+    @media @mobile {
+        margin: 0 auto;
+    }
+}
+
 #main-nav .widget .extendednavigation ul li, #main-nav .widget .extendednavigation ul li ul li {
-    width: 90%;
-    margin: 0 5%;
+    width: 100%;
+    margin: 0 auto;
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -webkit-flex: 1 1 auto;
@@ -482,7 +500,6 @@ Navigation
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
-    border-bottom: 0;
     min-height: 50px;
     a {
         white-space: normal;
@@ -494,7 +511,7 @@ Navigation
     }
     .text {
         display: block;
-        padding: 0 10%;
+        padding: 0 80px;
         &:after {
             display: inline-block;
             content: "\2193";
@@ -522,12 +539,26 @@ Navigation
 
 #main-nav .widget .extendednavigation ul li a, #main-nav .widget .extendednavigation ul li.folder span {
     width: 100%;
-  
+}
+#main-nav .widget .extendednavigation ul li a {
+    padding: 0 80px;
+    @media @mobile {
+        padding: 0 5%;
+    }
+}
+#main-nav .widget .extendednavigation ul li.folder ul li a {
+    padding: 0 23px;
+    @media @mobile {
+        padding: 0 5%;
+    }
+}
+#main-nav .widget .extendednavigation ul li.folder ul li .text, #main-nav .widget .extendednavigation ul li.folder ul li span {
+    padding: 0px;
 }
 .no-touch #main-nav .widget .extendednavigation ul li a:hover {
     background-color: #FFF;
 }
-#main-nav .widget .extendednavigation ul li:last-child a {
+#main-nav .widget .extendednavigation ul li:last-child {
     border-bottom: none;
 }
 #main-nav .cd-close-menu {
@@ -637,7 +668,7 @@ Navigation
 
 /* ===================
 
-Default Page
+    Default Page
 
  ===================== */
 
