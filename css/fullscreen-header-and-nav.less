@@ -154,10 +154,11 @@ Header
 
 #cd-social .widget.socialicons span a {
     margin-right: 0;
+    .border-radius(3px);
 }
 
 .widget.profile .bk-profile-socialicons span a, .widget.socialicons span a {
-    .border-radius(3px);
+    .border-radius(50px);
 }
 
 .cd-header .widget.socialicons {
@@ -464,12 +465,6 @@ Navigation
     display: none;
     border: 2px solid darken(@color-swatch7,7%);
     padding: 3% 0;
-    width: 60%;
-    margin: 0 20%;
-    @media only screen and (max-width: 555px) {
-        width: 80%;
-        margin: 0 10%;
-    }
     li {
         padding: 0;
     }
@@ -480,6 +475,14 @@ Navigation
     background-color: darken(@color-swatch7,2%);
     width: 60%;
     margin: 0 20%;
+    @media only screen and (max-width: 555px) {
+        width: 80%;
+        margin: 0 10%;
+    }
+    @media @mobile {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 #main-nav .widget .extendednavigation ul li, #main-nav .widget .extendednavigation ul li ul li {
     width: 90%;
@@ -494,6 +497,9 @@ Navigation
     align-self: auto;
     border-bottom: 0;
     min-height: 50px;
+    a {
+        white-space: normal;
+    }
 }
 #main-nav .widget .extendednavigation ul li.folder {
     &:after {
