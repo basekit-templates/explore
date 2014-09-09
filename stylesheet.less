@@ -530,6 +530,10 @@ hr {
 
 .widget.image {
     margin-bottom: 2em;
+    span img {
+        padding: 0 1px;
+        margin-bottom: 10px;
+    }
     span.image-title, span.image-description {
         clear: both;
         background-color: @color-swatch2;
@@ -544,8 +548,10 @@ hr {
 }
 
 .widget.image span.image-title {
-    padding: 15px 10px 0;
-    margin: 10px 0 0;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 25px 5px;
+    margin: 0;
     font-family: @font-swatch3-font-family;
     font-size: @font-swatch3-font-size;
     font-weight: @font-swatch3-font-weight;
@@ -554,13 +560,12 @@ hr {
     -webkit-border-radius: 3px 3px 0 0;
     -moz-border-radius: 3px 3px 0 0;
     border-radius: 3px 3px 0 0;
-    border-top: 1px solid darken(@color-swatch1,3%);
-    border-left: 1px solid darken(@color-swatch1,3%);
-    border-right: 1px solid darken(@color-swatch1,3%);
 }
 
 .widget.image span.image-description {
-    padding: 0 10px 15px;
+    display: inline-block;
+    width: 100%;
+    padding: 5px 25px 10px;
     margin: 0;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
@@ -570,9 +575,6 @@ hr {
     -webkit-border-radius: 0 0 3px 3px;
     -moz-border-radius: 0 0 3px 3px;
     border-radius: 0 0 3px 3px;
-    border-left: 1px solid darken(@color-swatch1,3%);
-    border-right: 1px solid darken(@color-swatch1,3%);
-    border-bottom: 1px solid darken(@color-swatch1,3%);
 }
 
 /* ===============================
