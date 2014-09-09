@@ -529,13 +529,11 @@ hr {
    =============================== */
 
 .widget.image {
+    margin-bottom: 2em;
     span.image-title, span.image-description {
         clear: both;
         border: 1px solid darken(@color-swatch1,3%);
         background-color: @color-swatch2;
-        -webkit-border-radius: 0 0 3px 3px;
-        -moz-border-radius: 0 0 3px 3px;
-        border-radius: 0 0 3px 3px;
     }
     a:hover {
         text-decoration: none;
@@ -547,23 +545,29 @@ hr {
 }
 
 .widget.image span.image-title {
-    padding: 20px 5px 0;
-    margin: 0;
+    padding: 15px 10px 0;
+    margin: 10px 0 0;
     font-family: @font-swatch3-font-family;
     font-size: @font-swatch3-font-size;
     font-weight: @font-swatch3-font-weight;
     line-height: @font-swatch3-line-height;
     color: @font-swatch3-color;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
 }
 
 .widget.image span.image-description {
-    padding: 0 5px 15px;
+    padding: 0 10px 15px;
     margin: 0;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     font-weight: @font-swatch5-font-weight;
     line-height: @font-swatch5-line-height;
     color: @font-swatch5-color;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
 }
 
 /* ===============================
