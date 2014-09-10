@@ -19,16 +19,18 @@ html, body {
   height: 100%;
 }
 
-body.bgImageOriginal {
-    background-image: none;
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
     .bk-home {
         background-image: image('/images/feature-bg.jpg');
         background-repeat: no-repeat;
         background-position: top center;
         background-size: cover;
         height: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
+    }
+    .bk-default {
+        background-color: @color-swatch1;
     }
 }
 
