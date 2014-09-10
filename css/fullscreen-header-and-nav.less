@@ -20,18 +20,11 @@ html, body {
 }
 
 body {
-    background-size: cover;
+    background-image: image('/images/feature-bg.jpg');
     background-repeat: no-repeat;
-    .bk-home {
-        background-image: image('/images/feature-bg.jpg');
-        background-repeat: no-repeat;
-        background-position: top center;
-        background-size: cover;
-        height: 100%;
-    }
-    .bk-default {
-        background-color: @color-swatch1;
-    }
+    background-position: top center;
+    background-size: cover;
+    height: 100%;
 }
 
 /* ==================================== 
@@ -699,6 +692,8 @@ Navigation
  ===================== */
 
 .bk-default {
+    background-color: @color-swatch1;
+    height: 100%;
     #cd-main-content {
         height: auto;
     }
