@@ -738,8 +738,15 @@ hr {
 }
 
 .widget.blogpostlist .blog-post-item {
-     border-bottom: 1px dotted @color-swatch7;
+    border-bottom: 1px dotted @color-swatch7;
+    .blog-post-feature-image-wrap img {
+        max-height: 300px;  
+    }
  }
+
+.widget.blogpost .blog-post-item .blog-post-feature-image-wrap img {
+    max-height: 500px;
+}
 
 .blog-post-item {
     text-align: center;
@@ -755,7 +762,7 @@ hr {
         }
         img {
             display: block;
-            max-width: 100%;     
+            max-width: 100%;   
             margin: 0 auto;
         }
     }/* end blog-post-feature-image-wrap */
