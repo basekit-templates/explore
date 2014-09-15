@@ -308,7 +308,7 @@ form.blog-search-form {
     }
 }
 
-.columns-two-left, .columns-two-right, .columns-three-left, .columns-three-middle, .columns-three-right, .columns-four-first, .columns-four-second, .columns-four-third, .columns-four-fourth {
+.columns-two-left, .columns-two-right, .columns-three-left, .columns-three-middle, .columns-three-right {
     .signupform fieldset input, .blogsearch form input {
         width: 80%;
         @media @tablet {
@@ -330,6 +330,24 @@ form.blog-search-form {
         @media @mobile {
             width: 100%;
         }
+    }
+}
+
+.columns-four-first, .columns-four-second, .columns-four-third, .columns-four-fourth {
+    .signupform fieldset input, .blogsearch form input {
+            width: 100%;
+    }
+    .signupform fieldset button, .blogsearch form button.blog-search-submit-button {
+        width: 100%;
+        padding: 0px 15px;
+        left: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border: none;
+    }
+    .widget.contactform fieldset .form-group button.btn {
+        width: 100%;
     }
 }
 
