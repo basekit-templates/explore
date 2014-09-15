@@ -454,9 +454,16 @@ Navigation
     -ms-flex-align: start;
     align-items: flex-start;
     li {
-        padding: 3% 0;
+        padding: 28px 0;
         border-bottom: 1px solid darken(@color-swatch7,8%);
         min-height: 50px;
+            @media @tablet {
+                padding: 22px 0;
+            }
+            @media @mobile {
+                padding: 9px 0;
+                min-height: 45px;
+            }
     }
     @media @mobile {
         padding: 40px 0;
