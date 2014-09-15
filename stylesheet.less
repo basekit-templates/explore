@@ -311,15 +311,20 @@ form.blog-search-form {
 .column {
     .signupform fieldset input, .blogsearch form input {
         width: 80%;
-        @media @mobile {
+        @media @tablet {
             width: 100%;
         }
     }
     .signupform fieldset button, .blogsearch form button.blog-search-submit-button {
         width: 20%;
         padding: 0;
-        @media @mobile {
+        @media @tablet {
             width: auto;
+            left: 0;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            border: none;
         }
     }
 }
