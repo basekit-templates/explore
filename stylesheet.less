@@ -307,6 +307,21 @@ form.blog-search-form {
     }
 }
 
+.column {
+    .signupform fieldset input, .blogsearch form input {
+        width: 80%;
+        @media @mobile {
+            width: 100%;
+        }
+    }
+    .signupform fieldset button, .blogsearch form button.blog-search-submit-button {
+        width: 19%;
+        @media @mobile {
+            width: auto;
+        }
+    }
+}
+
 .widget.profile form button.btn {
     position: relative;
     padding: 0px 15px;
