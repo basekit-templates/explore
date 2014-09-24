@@ -598,27 +598,33 @@ Navigation
 }
 #main-nav .cd-close-menu {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 13px;
+    right: 3%;
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: #d26c64;
     /* image replacement */
     overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
     z-index: 9999999;
+    .border-radius(5px);
+    border: 1px solid #ffffff;
+    &:hover {
+        background-color: lighten(#d26c64,5%);
+        .transition( all, 0.5s, ease );
+    }
 }
 #main-nav .cd-close-menu::before, #main-nav .cd-close-menu::after {
     content: '';
     display: inline-block;
     position: absolute;
-    top: 18px;
-    left: 10px;
+    top: 23px;
+    left: 14px;
     width: 20px;
     height: 3px;
-    background-color: #FFF;
+    background-color: #ffffff;
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     transition-property: transform;
