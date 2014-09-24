@@ -547,6 +547,9 @@ Navigation
     .text {
         display: block;
         padding: 28px 80px;
+        @media mobile {
+            padding: 10px;
+        }
         &:after {
             display: inline-block;
             content: "\2193";
@@ -582,7 +585,7 @@ Navigation
 #main-nav .widget .extendednavigation ul li a {
     padding: 28px 80px;
     @media @mobile {
-        padding: 0 5%;
+        padding: 10px;
     }
 }
 #main-nav .widget .extendednavigation ul li.folder ul li a {
