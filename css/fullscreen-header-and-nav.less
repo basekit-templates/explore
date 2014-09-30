@@ -186,9 +186,12 @@ Header
     margin: 0;
     span a {
         background-color: transparent;
+        -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
         &:hover {
             background-color: darken(@color-swatch7,5%);
-            .transition( all, 0.5s, ease );
+            .border-radius(3px);
         }
     }
     @media only screen and (max-width: 555px) {
@@ -200,27 +203,21 @@ Header
     /* PNG ICONS */
     span.bk-socialicons-twitter a {
         background-image: image('/images/social/socialicons-twitter.png');
-        background-size: 30px;
     }
     span.bk-socialicons-linkedin a {
         background-image: image('/images/social/socialicons-linkedin.png');
-        background-size: 30px;
     }
     span.bk-socialicons-facebook a {
         background-image: image('/images/social/socialicons-facebook.png');
-        background-size: 30px;
     }
     span.bk-socialicons-rss a {
         background-image: image('/images/social/socialicons-rss.png');
-        background-size: 30px;
     }
     span.bk-socialicons-googleplus a {
         background-image: image('/images/social/socialicons-googleplus.png');
-        background-size: 30px;
     }
     span.bk-socialicons-youtube a {
         background-image: image('/images/social/socialicons-youtube.png');
-        background-size: 30px;
     }
 }
 
@@ -768,6 +765,7 @@ Navigation
 
     #cd-company-name {
         display: table;
+        float: left;
         margin: 0 auto;
         background-color: @color-swatch7;
         border-bottom: 1px solid darken(@color-swatch7,3%);
