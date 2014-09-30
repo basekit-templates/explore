@@ -389,6 +389,10 @@ form.blog-search-form {
             margin-bottom: 10px;
             background-color: darken(@color-swatch1,3%);
             .border-radius(3px);
+            background-image: image('/images/envelope.png');
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: 10px center;
             @media @mobile {
                 background-image: none;
                 text-indent: 10px;
@@ -396,46 +400,6 @@ form.blog-search-form {
         }
         input:-webkit-autofill {
             text-indent: 10px;
-        }
-        ::-webkit-input-placeholder {
-            background-image: image('/images/envelope.png');
-            background-repeat: no-repeat;
-            background-position: 8px 5px;
-            text-indent: 2000px;
-            @media @mobile {
-                background-image: none;
-                text-indent: 10px;
-            }
-        }
-        :-moz-placeholder { /* Firefox 18- */
-            background-image: image('/images/envelope.png');
-            background-repeat: no-repeat;
-            background-position: 8px 5px;
-            text-indent: 2000px;
-            @media @mobile {
-                background-image: none;
-                text-indent: 10px;
-            }
-        }
-        ::-moz-placeholder {  /* Firefox 19+ */
-            background-image: image('/images/envelope.png');
-            background-repeat: no-repeat;
-            background-position: 8px 5px;
-            text-indent: 2000px;
-            @media @mobile {
-                background-image: none;
-                text-indent: 10px;
-            }
-        }
-        :-ms-input-placeholder {  
-            background-image: image('/images/envelope.png');
-            background-repeat: no-repeat;
-            background-position: 8px 5px;
-            text-indent: 2000px;
-            @media @mobile {
-                background-image: none;
-                text-indent: 10px;
-            }
         }
         .form-group button.btn {
             @media @mobile {
