@@ -1,7 +1,7 @@
 {
     "name":"Explore",
     "thumbnail":"explore.png",
-    "screenshot":"explore.png",
+    "screenshot":"explore-screenshot.jpg",
     "templateType":"standard",
     "images":[
         "images/feature-bg.jpg"
