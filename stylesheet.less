@@ -80,7 +80,8 @@ button.btn,
 .btn,
 .widget.profile form button, 
 .signupform fieldset button, 
-.contactform button.btn, 
+.contactform button.btn,
+.advancedcontactform fieldset button,
 .blogsearch form button, 
 .checkout-order-button, 
 .checkout-empty-link,
@@ -347,7 +348,8 @@ form.blog-search-form {
         box-shadow: none;
         border: none;
     }
-    .widget.contactform fieldset .form-group button.btn {
+    .widget.contactform fieldset .form-group button.btn,
+    .advancedcontactform fieldset button {
         width: 100%;
     }
 }
@@ -376,15 +378,21 @@ form.blog-search-form {
     }
 }
 
-/* CONTACT FORM */
+/* CONTACT FORM AND ADVANCED FORM*/
 
-.widget.contactform {
+.widget.contactform,
+.advancedcontactform {
     border: 1px solid darken(@color-swatch1,3%);
     background-color: @color-swatch2;
     .border-radius(3px);
     padding: 30px;
+}
+
+.widget.contactform,
+.advancedcontactform {
     fieldset {
-        input {
+        input.email,
+        .input--email {
             text-indent: 40px;
             margin-bottom: 10px;
             background-color: darken(@color-swatch1,3%);
@@ -409,7 +417,8 @@ form.blog-search-form {
     }
 }
 
-.widget.contactform fieldset textarea {
+.widget.contactform fieldset textarea,
+.advancedcontactform fieldset textarea {
     margin-bottom: 10px;
     background-image: image('/images/pencil.png');
     background-repeat: no-repeat;
@@ -489,6 +498,14 @@ form.blog-search-form {
         }
     }
 }  
+
+.advancedcontactform .option-list {
+    padding: 1em 0;
+}
+
+.advancedcontactform fieldset button {
+    margin-top: 20px;
+}
 
 /* ===============================
    TWITTER
