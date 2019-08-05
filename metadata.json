@@ -1,5 +1,6 @@
 {
     "name":"Explore",
+    "versionTenCompatible": 1,
     "thumbnail":"explore.png",
     "screenshot":"explore-screenshot.jpg",
     "templateType":"standard",
